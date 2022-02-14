@@ -1,7 +1,11 @@
+require("dotenv").config({ path: "./config/.env" });
 const express = require("express");
-const env = require("dotenv").config();
 const port = process.env.PORT || 5000;
+const connectDB = require("./config/db");
 const medications = require("./routes/medications");
+
+// Connect to database
+connectDB();
 
 const app = express();
 
