@@ -1,38 +1,64 @@
 const asyncHandler = require("express-async-handler");
 
+const Med = require("../models/medicationModel");
+
+// Get all the medications
 const getMedications = asyncHandler(async (req, res, next) => {
-  res.status(200).json({ success: true, message: "Get all the medications" });
+  const meds = await Med.find();
+
+  res.status(200).json(meds);
 });
 
+// Get a single medication
 const getMedication = asyncHandler(async (req, res, next) => {
   res
     .status(200)
     .json({ success: true, message: `Get the medication ${req.params.id}` });
 });
 
+// Insert a new medication
 const addMedication = asyncHandler(async (req, res, next) => {
-  if (!req.body.text) {
+  if (!req.body["nombre-medicamento"]) {
     res.status(400);
     throw new Error("Please add a text field");
   }
 
-  res
-    .status(200)
-    .json({ success: true, message: `Add a medication to the database` });
+  const med = await Med.create({
+    "nombre-medicamento": req.body["nombre-medicamento"],
+    ean13: req.body["ean13"],
+  });
+
+  res.status(200).json(med);
 });
 
+// Update a medication
 const updateMedication = asyncHandler(async (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    message: `Update the medication ${req.params.id}`,
+  const med = await Med.findById(req.params.id);
+
+  if (!med) {
+    res.status(400);
+    throw new Error("Medication not found");
+  }
+
+  const updatedMed = await Med.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
   });
+
+  res.status(200).json(updatedMed);
 });
 
+// Delete a medication
 const deleteMedication = asyncHandler(async (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    message: `Medication ${req.params.id} was deleted successfully`,
-  });
+  const med = await Med.findById(req.params.id);
+
+  if (!med) {
+    res.status(400);
+    throw new Error("Medication not found");
+  }
+
+  await med.remove();
+
+  res.status(200).json({ id: req.params.id });
 });
 
 module.exports = {

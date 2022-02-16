@@ -1,3 +1,4 @@
 node_modules
 config/.env
-config/final-table.json
+final-table.json
+table21.json
