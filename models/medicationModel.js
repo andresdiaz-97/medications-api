@@ -1,10 +1,15 @@
 const mongoose = require("mongoose");
+const User = require("./userModel");
 
 const medSchema = mongoose.Schema(
   {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: User,
+    },
     "nombre-medicamento": {
       type: String,
-      required: [true, "Please add a text value"],
+      required: [true, "Por favor añade el nombre del medicamento"],
     },
     bioequivalencia: String,
     tipo_receta: String,
@@ -26,7 +31,6 @@ const medSchema = mongoose.Schema(
     "tipo-producto": String,
     ean13: {
       type: String,
-      required: [true, "Please add a barcode value"],
     },
     "valor-unidad-por-caja": String,
     "metlife-convenio": String,

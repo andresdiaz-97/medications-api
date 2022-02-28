@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free bootstrap documentation template">
+    <title>Medicamentos API</title>
+    <!-- using online links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- using local links -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/sidebar-themes.min.css">
+    <link rel="stylesheet" href="css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="css/postman.min.css">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> </head>
+
+<body>
+    <div class="page-wrapper light-theme">
+        <div class="modal dark-background" id="snippetModal" tabindex="-1" role="dialog" aria-labelledby="documentation-response-modal" style="display: none;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-header">
+            <div class="title">Example Response</div>
+            <button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close">
+              <div>
+              <span id="closeModal" aria-hidden="true">�</span>
+              </div>
+            </button>
+          </div>
+          <div class="modal-content">
+            <div class="modal-body" style="width: 540.5px;">
+              <pre class="  language-javascript">
+                  <code class=" language-javascript"></code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+
+        .click-to-expand-wrapper.is-snippet-wrapper {
+            max-height: none;
+        }
+
+        .examples {
+            background-color: #303030;
+            padding-top: 40px;
+        }
+
+        @media(max-width: 800px) {
+            body #doc-body:not(.is-loading) {
+                background-image: none;
+            }
+        }
+
+      </style>
+        
+        <!-- page-content  -->
+        <main class="page-content">
+            <div id="overlay" class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center p-3 border-bottom">
+                    <div class="col-md-1 d-flex align-items-center pl-lg-4 ">
+                        <a id="toggle-sidebar" class="btn rounded-0 p-3" href="#"> <i class="fas fa-pills fa-2x"></i> </a>
+                        <div class="col-md-9">
+                            <h2>Medicamentos API</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-9"></div>
+                    <div class="col-md-2 text-left ">
+                    </div>
+                </div>
+                <div class="row p-lg-4">
+                    <article class="main-content col-md-12 pr-lg-9" id="doc-body">
+                        
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="1">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            Obtener todos los medicamentos. <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/medications</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Obtiene todos los medicamentos disponibles en la base de datos.</p></p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">urlencoded</span></div>
+                                        <hr>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Obtener todos los medicamentos.</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="1" data-response-info="response_1">Obtener todos los medicamentos.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="1"  data-id="response_1">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Obtener todos los medicamentos.">
+                                                <code class="is-highlighted">
+GET http://med-app.cl/api/medications</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="2">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            Obtener medicamento por codigo de barra <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/medications/7800007124326</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Obtiene un medicamento en especifico con el codigo de barra del mismo.</p></p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">urlencoded</span></div>
+                                        <hr>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Obtener medicamento por codigo de barra</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="2" data-response-info="response_2">Obtener medicamento por codigo de barra</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="2"  data-id="response_2">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Obtener medicamento por codigo de barra">
+                                                <code class="is-highlighted">
+GET http://med-app.cl/api/medications/7800007124326</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="3">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            Añadir un medicamento <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/medications</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Agrega un medicamento a la base de datos, solo para Administradores.</p></p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">HEADERS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                            <div class="value col-md-9 col-xs-12">application/json</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="Añadir un medicamento">
+                                                  <code>
+                                                    
+{
+    "_id": "6212f064cf51e70a5ff9cd36",
+    "nombre-medicamento": "Paracetamol 500mg x 16 comprimido",
+    "bioequivalencia": "si",
+    "fraccionable": "no",
+    "cenabast": "no",
+    "dci": "paracetamol",
+    "dosis": "500",
+    "unidad-medida": "mg",
+    "forma-farmaceutica": "comprimido",
+    "registro-isp": "f-4001",
+    "categorizacionoms": "n02b",
+    "grupo": "sistema nervioso",
+    "referencia": "",
+    "laboratorio": "laboratorio-chile-s.a.",
+    "origen": "nacional",
+    "formato-venta": "estuche-secundario",
+    "tipo-producto": "genérico",
+    "ean13": "7800007124326",
+    "valor-unidad-por-caja": "56",
+    "metlife-convenio": "no",
+    "vidacamara-convenio": "si",
+    "metlife-clase": "",
+    "vidacamara-clase": "8090303",
+    "__v": 0,
+    "createdAt": "2022-02-21T01:52:36.552Z",
+    "updatedAt": "2022-02-21T01:52:36.552Z"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Añadir un medicamento</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="3" data-response-info="response_3">Añadir un medicamento</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="3"  data-id="response_3">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Añadir un medicamento">
+                                                <code class="is-highlighted">
+POST http://med-app.cl/api/medications
+
+{
+    "_id": "6212f064cf51e70a5ff9cd36",
+    "nombre-medicamento": "Paracetamol 500mg x 16 comprimido",
+    "bioequivalencia": "si",
+    "fraccionable": "no",
+    "cenabast": "no",
+    "dci": "paracetamol",
+    "dosis": "500",
+    "unidad-medida": "mg",
+    "forma-farmaceutica": "comprimido",
+    "registro-isp": "f-4001",
+    "categorizacionoms": "n02b",
+    "grupo": "sistema nervioso",
+    "referencia": "",
+    "laboratorio": "laboratorio-chile-s.a.",
+    "origen": "nacional",
+    "formato-venta": "estuche-secundario",
+    "tipo-producto": "genérico",
+    "ean13": "7800007124326",
+    "valor-unidad-por-caja": "56",
+    "metlife-convenio": "no",
+    "vidacamara-convenio": "si",
+    "metlife-clase": "",
+    "vidacamara-clase": "8090303",
+    "__v": 0,
+    "createdAt": "2022-02-21T01:52:36.552Z",
+    "updatedAt": "2022-02-21T01:52:36.552Z"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="4">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="PUT method" >PUT</span>
+                                            Editar un medicamento <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://localhost:5000/api/medications/6216dfe12e27b514afa853a4</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Edita un medicamento de la base de datos usando el ID, solo para Administradores.</p></p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">HEADERS</div>
+                                        <hr>
+                                          <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                            <div class="value col-md-9 col-xs-12">application/json</div>
+                                            <div class="description col-md-9 col-xs-12"><p>None</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">raw</span></div>
+                                        <hr>
+                                            <div class="raw-body code-snippet">
+                                              <pre class="body-block click-to-expand-wrapper is-snippet-wrapper " data-title="Editar un medicamento">
+                                                  <code>
+                                                    
+{
+    "nombre-medicamento": "Ibuprofeno"
+}
+                                                  </code>
+                                              </pre>
+                                            </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Editar un medicamento</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="4" data-response-info="response_4">Editar un medicamento</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="4"  data-id="response_4">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Editar un medicamento">
+                                                <code class="is-highlighted">
+PUT http://localhost:5000/api/medications/6216dfe12e27b514afa853a4
+
+{
+    "nombre-medicamento": "Ibuprofeno"
+}</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="5">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="DELETE method" >DELETE</span>
+                                            Borrar un medicamento <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/medications/620c5860536b6c2451422af8</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Borra un medicamento de la base datos usando el ID, solo para Administradores.</p></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Borrar un medicamento</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="5" data-response-info="response_5">Borrar un medicamento</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="5"  data-id="response_5">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Borrar un medicamento">
+                                                <code class="is-highlighted">
+DELETE http://med-app.cl/api/medications/620c5860536b6c2451422af8</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="6">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            Registrarse <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/users</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Registrar una usuario para poder acceder a la base de datos.</p></p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">urlencoded</span></div>
+                                        <hr>
+                                              <div class="param row">
+                                                <div class="name col-md-3 col-xs-12">name</div>
+                                                <div class="value col-md-9 col-xs-12">andres</div>
+                                                <div class="description col-md-9 col-xs-12"><p>None</p>
+                                                </div>
+                                              </div>
+                                              <div class="param row">
+                                                <div class="name col-md-3 col-xs-12">email</div>
+                                                <div class="value col-md-9 col-xs-12">andres@email.com</div>
+                                                <div class="description col-md-9 col-xs-12"><p>None</p>
+                                                </div>
+                                              </div>
+                                              <div class="param row">
+                                                <div class="name col-md-3 col-xs-12">password</div>
+                                                <div class="value col-md-9 col-xs-12">******</div>
+                                                <div class="description col-md-9 col-xs-12"><p>None</p>
+                                                </div>
+                                              </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Registrarse</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="6" data-response-info="response_6">Registrarse</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="6"  data-id="response_6">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Registrarse">
+                                                <code class="is-highlighted">
+POST http://med-app.cl/api/users</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="7">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="POST method" >POST</span>
+                                            Iniciar sesion <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/users/login</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Inicio de sesion con email y contraseña.</p></p>
+                                    </div>
+                                    
+                                    <div class="request-body">
+                                        <div class="body-heading">BODY <span class="body-type">urlencoded</span></div>
+                                        <hr>
+                                              <div class="param row">
+                                                <div class="name col-md-3 col-xs-12">email</div>
+                                                <div class="value col-md-9 col-xs-12">andres@email.com</div>
+                                                <div class="description col-md-9 col-xs-12"><p>None</p>
+                                                </div>
+                                              </div>
+                                              <div class="param row">
+                                                <div class="name col-md-3 col-xs-12">password</div>
+                                                <div class="value col-md-9 col-xs-12">******</div>
+                                                <div class="description col-md-9 col-xs-12"><p>None</p>
+                                                </div>
+                                              </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Iniciar sesion</span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="7" data-response-info="response_7">Iniciar sesion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="7"  data-id="response_7">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Iniciar sesion">
+                                                <code class="is-highlighted">
+POST http://med-app.cl/api/users/login</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12 section">
+                                <div class="api-information" id="8">
+                                     <div class="heading">
+                                        <div class="name">
+                                            <span class="GET method" >GET</span>
+                                            Informacion de la cuenta  <span class="lock-icon"></span>
+                                        </div>
+                                     </div>
+                                    <div class="url">http://med-app.cl/api/users/me</div>
+                                    
+                                    <div class="description request-description">
+                                        <p><p>Proporciona informacion acerca de la cuenta en la que se ha ingresado.</p></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 examples">
+                                <div class="sample-request">
+                                    <div class="heading">
+                                        <span>Example Request</span>
+                                    </div>
+                                    <div class="responses-index">
+                                        <div class="dropdown response-name">
+                                            <button class="btn   responses-dropdown truncate" type="button" id="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              <span id="selected" class="response-name-label">Informacion de la cuenta </span>
+                                                <span class="caret"></span>
+
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="f678f251-1750-4e3a-b5d8-05b4c6b0fb37_dropdown">
+                                                <li class="truncate" data-request-info="8" data-response-info="response_8">Informacion de la cuenta </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formatted-requests " data-request-id="8"  data-id="response_8">
+                                    <div class="request code-snippet">
+                                        <div>
+                                            <pre class="click-to-expand-wrapper is-snippet-wrapper " data-title="Informacion de la cuenta ">
+                                                <code class="is-highlighted">
+GET http://med-app.cl/api/users/me</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-no-padding row-eq-height">
+                            <div class="col-md-6 col-xs-12">
+                                <div class="api-information">
+                                    <div class="collection-name">
+                                    </div>
+                                    <div class="collection-description">
+                                         <h6> <i class="fas fa-regular fa-copyright "></i> Desarrollado por: Andres Diaz</h6> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    <!-- using online scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/bootstrap-treeview.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script type="application/javascript">
+        var data = [{'text': 'Medicamentos', 'nodes': [{'text': 'Obtener todos los medicamentos.', 'href': '#1', 'method': 'GET'}, {'text': 'Obtener medicamento por codigo de barra', 'href': '#2', 'method': 'GET'}, {'text': 'Añadir un medicamento', 'href': '#3', 'method': 'POST'}, {'text': 'Editar un medicamento', 'href': '#4', 'method': 'PUT'}, {'text': 'Borrar un medicamento', 'href': '#5', 'method': 'DELETE'}], 'icon': 'fas fa-folder', 'selectable': 'false'}, {'text': 'Usuarios', 'nodes': [{'text': 'Registrarse', 'href': '#6', 'method': 'POST'}, {'text': 'Iniciar sesion', 'href': '#7', 'method': 'POST'}, {'text': 'Informacion de la cuenta ', 'href': '#8', 'method': 'GET'}], 'icon': 'fas fa-folder', 'selectable': 'false'}]
+        $('#tree').treeview({
+            data: data,
+            levels: 10,
+            expandIcon: 'fas fa-caret-right',
+            collapseIcon: 'fas fa-caret-down',
+            enableLinks: true,
+            showIcon: true,
+            showMethod: true
+        });
+    </script>
+
+</body>
+
+</html>

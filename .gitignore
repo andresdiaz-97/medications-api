@@ -2,3 +2,4 @@ node_modules
 config/.env
 final-table.json
 table21.json
+seeder.js

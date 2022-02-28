@@ -1,5 +1,12 @@
 const errorHandler = (err, req, res, next) => {
-  const statusCode = res.statusCode ? res.statusCode : 500;
+  let statusCode = res.statusCode ? res.statusCode : 500;
+
+  console.log(`this is the error name: ${err.name}`);
+
+  if (err.name === "CastError") {
+    err.message = `No existe ningun recurso con el id ${err.value}`;
+    statusCode = 400;
+  }
 
   res.status(statusCode);
   res.json({
