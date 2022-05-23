@@ -21,6 +21,9 @@ connectDB();
 // Initialize express
 const app = express();
 
+// Enable CORS
+app.use(cors());
+
 // Add middleware for json body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -43,9 +46,6 @@ app.use(xss());
 
 // Prevent http params pollution
 app.use(hpp());
-
-// Enable CORS
-app.use(cors());
 
 app.use(express.static(path.join(__dirname, "docs")));
 
