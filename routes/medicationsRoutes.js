@@ -1,24 +1,27 @@
-const express = require("express");
+const express = require("express")
 const {
   getMedications,
   getMedication,
   addMedication,
   updateMedication,
   deleteMedication,
-} = require("../controllers/medicationsController");
-const router = express.Router();
-const { authorize, protect } = require("../middleware/authMiddleware");
+  getMedByName,
+} = require("../controllers/medicationsController")
+const router = express.Router()
+const { authorize, protect } = require("../middleware/authMiddleware")
 
 router
   .route("/")
   .get(getMedications)
-  .post(protect, authorize("admin"), addMedication);
+  .post(protect, authorize("admin"), addMedication)
 
-router.route("/:ean13").get(getMedication);
+router.route("/:ean13").get(getMedication)
+
+router.route("/name/:name").get(getMedByName)
 
 router
   .route("/:id")
   .put(protect, authorize("admin"), updateMedication)
-  .delete(protect, authorize("admin"), deleteMedication);
+  .delete(protect, authorize("admin"), deleteMedication)
 
-module.exports = router;
+module.exports = router
