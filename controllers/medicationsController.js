@@ -16,6 +16,13 @@ const getMedication = asyncHandler(async (req, res, next) => {
   res.status(200).json(med)
 })
 
+// Get a single medication by id
+const getMedicationById = asyncHandler(async (req, res, next) => {
+  const med = await Med.findById(req.params.id)
+
+  res.status(200).json(med)
+})
+
 // Get a medication by name
 const getMedByName = asyncHandler(async (req, res, next) => {
   //const med = await Med.findOne({ ean13: req.params.ean13 })
@@ -74,6 +81,7 @@ const deleteMedication = asyncHandler(async (req, res, next) => {
 module.exports = {
   getMedications,
   getMedication,
+  getMedicationById,
   getMedByName,
   addMedication,
   updateMedication,

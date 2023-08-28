@@ -6,6 +6,7 @@ const {
   updateMedication,
   deleteMedication,
   getMedByName,
+  getMedicationById,
 } = require("../controllers/medicationsController")
 const router = express.Router()
 const { authorize, protect } = require("../middleware/authMiddleware")
@@ -18,6 +19,8 @@ router
 router.route("/:ean13").get(getMedication)
 
 router.route("/name/:name").get(getMedByName)
+
+router.route("/id/:id").get(getMedicationById)
 
 router
   .route("/:id")
